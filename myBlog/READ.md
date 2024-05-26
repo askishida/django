@@ -12,7 +12,7 @@
 
 2,前準備
 =
-#Python 3.6.5 環境
+#Python 3.7 環境
 
 pip3 install django-ckeditor, 
 
@@ -201,3 +201,7 @@ http {
 
 4,起動のさせ方
 =
+サーバー内のターミナルで以下の操作をします。
+
+source ~/django_py3.7(仮想環境)/bin/activate
+gunicorn myBlog.wsgi -b 127.0.0.1:40001 &
