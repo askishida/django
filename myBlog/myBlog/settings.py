@@ -39,7 +39,7 @@ DEBUG_TOOLBAR_CONFIG = {
 
 
 
-ALLOWED_HOSTS = ["my_domain_name","160.16.227.228","127.0.0.1","localhost"]
+ALLOWED_HOSTS = ["my_domain_name","ipaddress","127.0.0.1","localhost"]
 
 
 # Application definition
@@ -245,8 +245,6 @@ TEMPLATES = [
         },
     },
 ]
-#以下は動かない。
-#FORM_RENDERER = 'django.forms.renderers.TemplatesSetting'
 WSGI_APPLICATION = 'myBlog.wsgi.application'
 
 
