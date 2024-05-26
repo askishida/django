@@ -1,0 +1,233 @@
+.tag{
+
+
+    font-size: 12px;
+    line-height: 2.5em;
+
+}
+.tag a{
+    display: inline-block;
+    border-radius:2px;
+    text-decoration:none;
+    padding:0.4em 0.6em;
+    margin:0.1em 0.1em;
+
+    background-color: rgba(38,42,94,0.8);
+    color: white;
+}
+.tag a:hover{
+background-color:rgba(38,42,94,1);
+
+}
+
+.tag2{
+
+    font-size: 0px;
+    line-height: 2.5em;
+    color:rgba(100,40,20,1);
+}
+.tag2 a{
+    display: inline-block;
+    border-radius:2px;
+    text-decoration:none;
+    padding:0.4em 0.6em;
+    margin:0.1em 0.1em;
+    color:rgba(100,40,20,1);
+    background-color: white;
+
+}
+.tag2 a .badge{
+    visibility:hidden;
+
+}
+
+
+.tag2 a:hover{
+    color:rgba(90,90,0,1);
+
+}
+
+.tag2 a:hover .badge{
+    visibility:visible;
+
+}
+
+
+
+@media screen and (min-width: 992px){
+
+#side {
+
+
+
+width: 250px;
+height:300px;
+display:inline-block;
+/*
+position: -webkit-sticky; 
+position: sticky;
+*/
+/* 効いていない */
+/*padding-bottom:1200px;*/
+}
+
+.bottom_fixed{
+
+position: relative;
+bottom: 100px;
+
+}
+
+
+#side2 {
+
+
+width:250px;
+
+
+}
+/*
+.main-container {
+overflow:hidden;
+padding:0 0 40px 0;
+}
+.wrapper-columun12 {
+float:left;
+margin-right: -200px;
+width:100%;
+}
+.column2 {
+margin-right:20px;
+margin-left:-300px;
+padding:30px 0 30px 0;
+float:right;
+width:100%;
+
+}
+*/
+.containerx {
+
+display: -webkit-box;
+display:-moz-box;
+display: flexbox;
+
+}
+
+.central{
+-webkit-box-flex:1;
+-moz-box-flex:1;
+box-flex:1;
+max-width:700px;
+}
+.left{
+width:200px;
+
+}
+.right{
+
+width:300px;
+
+}
+/*
+
+.wrapper-column12-container {
+overflow:hidden;
+margin-right:200px;
+}
+*/
+
+
+
+.fixed{
+position:fixed;
+top:20px;/*固定させたい位置*/
+right:20px;
+}
+
+#leftside {
+
+font-size:15px;
+width:200px;
+
+
+}
+.amazon {
+font-size:9px;
+width:150px;
+}
+.search {
+display: inline-block;
+white-space: nowrap;
+}
+#bottom{
+height:500px;
+margin-left:50px;
+margin-bottom:500px;
+}
+
+}
+
+@media screen and (max-width: 991px) and (min-width: 881px){
+
+#side {
+
+width: 250px;
+height:300px;
+display:inline-block;
+margin-right:20px;
+width: 200px;
+
+}
+#side2 {
+margin: 0 20px 0 0;
+
+width: 200px;
+margin-right:20px ;
+
+}
+#leftside {
+
+
+width: 200px;
+margin-left:20px ;
+margin-right:100px ;
+padding:20px;
+}
+#main {
+margin-left:20px;
+margin-right:20px;
+padding:20px;
+}
+.amazon {
+font-size:9px;
+}
+.search {
+display: inline-block;
+
+white-space: nowrap;
+}
+}
+
+@media screen and (max-width: 880px){
+
+#side {
+
+
+
+margin:50px;
+
+}
+#leftside {
+
+padding:20px;
+margin:20px;
+
+
+
+
+}
+
+
+}
+
+
