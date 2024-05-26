@@ -1,13 +1,15 @@
 1,前準備
+=
 
 pip3 install django-ckeditor, 
 
 
 
 2,nginx
+=
 
-etc/nginx/nginx.conf
-==
+#etc/nginx/nginx.conf
+
 user  adminuser;
 worker_processes  1;
 
