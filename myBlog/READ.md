@@ -13,7 +13,7 @@
 2,前準備
 =
 ```
-#Python 3.7 環境
+#Python 3.7.0 環境
 
 pip3 install django-ckeditor, 
 
@@ -22,7 +22,8 @@ pip3 install django-ckeditor,
 3,Nginx settings
 =
 ```
-#etc/nginx/nginx.conf
+#/etc/nginx/nginx.conf
+#新しいバージョンでは/etc/nginx/conf.d/default.confかもしれません。
 
 user  adminuser;
 worker_processes  1;
