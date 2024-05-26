@@ -1,6 +1,6 @@
 1,前準備
 =
-
+#Python 3.6.5 環境
 pip3 install django-ckeditor, 
 
 
