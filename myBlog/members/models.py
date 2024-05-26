@@ -1,7 +1,7 @@
 from django.db import models  # お決まり
 
 
-class Members(models.Model):  # SeiyuuというTableを宣言する、頭文字が大文字が流儀
+class Members(models.Model):  # 頭文字は大文字
     """メンバーの一覧"""
 
     #  性別を選択する選択肢を宣言
