@@ -203,5 +203,9 @@ http {
 =
 サーバー内のターミナルで以下の操作をします。
 
+```
+
 source ~/django_py3.7(仮想環境)/bin/activate
 gunicorn myBlog.wsgi -b 127.0.0.1:40001 &
+
+```
