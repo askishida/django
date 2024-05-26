@@ -1,0 +1,56 @@
+<div id="bottom">
+<div>
+<p>関連記事</p>
+<ul>
+{% for post in similar_posts %}
+
+
+<li class="post-title">
+<a href="{% url 'posts:detail' slug=post.slug %}">{{ post.title }} <span class="badge badge-primary badge-pill">{{post.visitors}}</span><br>{{ post.publish|date:"Y/n/j g時" }}</a></li>
+
+{% empty %}
+まだ関連記事はありません。
+
+{% endfor %}
+</ul>
+</div>
+
+
+
+
+
+<div>
+<p>新着タイトル</p>
+<ul>
+    {% for article in posts %}
+
+         <li class="post-title"><a href="{% url 'posts:detail' slug=article.slug %}">{{ article.publish|date:"Y/n/j g時" }}<br> {{ article.title }}<span class="badge badge-primary badge-pill">{{article.visitors}}</span></a></li>
+<br>
+    {% endfor %}
+</ul>
+</div>
+
+<div>
+<p>カテゴリ</p>
+</div>
+
+<div>
+<p>タグ</p>
+<p class="tag2">
+{% for t,i in result  %}
+
+<a href="{% url "posts:article_list_by_tag" t.slug %}"><font size={{i|add:"1"}}>{{ t }}<span class="badge badge-primary badge-pill">{{i}}</span></font></a>
+{% endfor %}
+</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>

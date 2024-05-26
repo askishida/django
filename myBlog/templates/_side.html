@@ -1,0 +1,145 @@
+    <!-- Side Content -->
+{% load static %}
+{% load taggit_templatetags2_tags %}
+
+<div id=side>
+
+<a target="_blank"  href="https://www.amazon.co.jp/gp/product/B07FXPWJZF/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B07FXPWJZF&linkCode=as2&tag=totinoki08-22&linkId=caaf1137da13243c6853deabf735fa43"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN=B07FXPWJZF&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=totinoki08-22" ></a><img src="//ir-jp.amazon-adsystem.com/e/ir?t=totinoki08-22&l=am2&o=9&a=B07FXPWJZF" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
+
+<a target="_blank" href="https://www.amazon.co.jp/gp/product/B07FXPWJZF/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B07FXPWJZF&linkCode=as2&tag=totinoki08-22&linkId=ff7754b2a8bcba5dde960f480ba1a76c">BUFFALO WiFi 無線LAN ルーター WSR-2533DHPL 11ac 1733+800Mbps 4LDK 3階建向け 【iPhoneX/iPhoneXSシリーズ/Echo メーカー動作確認済</a><img src="//ir-jp.amazon-adsystem.com/e/ir?t=totinoki08-22&l=am2&o=9&a=B07FXPWJZF" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
+<div><table>
+<tbody>
+<tr>
+<td></td>
+</tr>
+
+</tbody>
+
+</table></div>
+<div>
+<p>新着タイトル</p>
+
+    {% for article in posts %}
+
+         <li class="post-title"><a href="{% url "posts:detail" slug=article.slug %}">{{ article.publish|date:"Y/n/j" }}({{ article.publish|date:"D" }}){{ article.publish|date:" g時" }}<br>{{ article.title }}<span class="badge badge-primary badge-pill">{{article.visitors}}</span></a></li>
+ 
+<hr>         
+      
+     
+       
+    {% endfor %}
+
+</div>
+
+<div>
+<p>人気記事</p>
+
+<ol class="crown">
+    {% for article in pop_posts %}
+
+    <li ><a href="{% url "posts:detail" slug=article.slug %}"><span class="badge badge-primary badge-pill">{{article.visitors}} Views</span><br>{{ article.title }}<br><small>{{ article.publish|date:"Y/n/j" }}({{ article.publish|date:"D" }}){{ article.publish|date:" g時" }}</small></a></li>
+
+
+
+
+    {% endfor %}
+
+
+</ol>
+</div>
+
+
+<div class="ark">
+<p>カテゴリ</p>
+{% for f, q in result_f %}
+  <!--ラベル1-->
+ <div class="cp_actab"> <input type="checkbox" id="{{ f }}" name="tabs">
+    <label for="{{ f }}">{{ f }} ({{q}})</label>
+
+    <div class="cp_actab-content">
+      <!--ここに隠す中身-->
+      {% for c,i in result2 %}
+      {% if c.parent == f %}
+     
+        <a href="{% url "posts:article_list_by_category" c.slug %}">{{ c }}({{ i }})</a>
+      
+      {% endif %}
+      {% endfor %}
+
+
+
+    </div>
+    <!--//ラベル1-->
+
+
+ </div><!--//.accbox-->
+
+{% endfor %}
+</div>
+
+
+
+
+
+<div>
+<p>タグ</p>
+<p class="tag2">
+{% for t,i in result %}
+
+<a href="{% url "posts:article_list_by_tag" t.slug %}"><font size={{i|add:"1"}}>{{ t }}<span class="badge badge-primary badge-pill">{{i}}</span></font></a>
+{% endfor %}
+</p>
+<p>タグクラウド</p>
+{% get_tagcloud as tags for 'posts.Article' %}
+<ul>
+{% for tag in tags %}
+<li><font size={{tag.weight|floatformat:0}}>{{tag}}</font></li>
+{% endfor %}
+</ul>
+</div>
+
+
+<div class="ark">
+<p>アーカイブ</p>
+
+
+
+
+{% for y,i in result_y %}
+<div class="cp_actab"> <input id="{{ y }}" type="checkbox" name="tabs">
+    <label for="{{ y }}"><a href="/posts/{{ y }}/">{{ y }}年({{ i }})</a></label> {% for m,j in result_m %} {% if y == m.0 %}
+
+
+    <div class="cp_actab-content"><input id="{{ m }}" type="checkbox" name="tabs">
+
+
+        <label for="{{ m }}" ><a href="/posts/{{ y }}/{{ m.1 }}/">{{ m.1 }}月({{ j }})</label> {% for d,l in result_d1 %} {% if m.1 == d.1 and y == d.0 %}
+       <div class="cp_actab-content">
+        <a href="/posts/{{ y }}/{{ d.1 }}/{{ d.2 }}/" >{{ d.1 }}/{{ d.2 }}({{d.3}})({{ l }})</a>
+       </div>
+        
+        {% endif %}{% endfor %}
+    </div>
+    {% endif %} {% endfor %}
+</div>
+{% endfor %}
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</div>
+
+

@@ -1,0 +1,27 @@
+
+<div>
+    <p><strong>{{ posts.number }}</strong>ページ目<strong>{{ posts.start_index }}〜{{ posts.end_index }}</strong>件/全{{ posts.paginator.num_pages }}ページ、全{{ posts.paginator.count }}記事中</p>
+</div>
+<div class="pagination">
+
+  {% if posts.has_previous %}
+
+     <p><a href="?page=1{% if query %}&q={{ query }}{% endif %}">先頭ページ<<</a>
+      <a href="?page={{ posts.previous_page_number }}{% if query %}&q={{ query }}{% endif %}">前へ<</a>
+  {% endif %}
+
+  {% for num in posts.paginator.page_range %}
+      {% if posts.number == num %}   
+        <strong>{{ num }}</strong>
+      {% elif num > posts.number|add:'-3' and num < posts.number|add:'3' %}
+        <a href="?page={{ num }}">{{ num }}</a>
+      {% endif %}
+  {% endfor %}
+
+
+
+  {% if posts.has_next %}
+      <a href="?page={{ posts.next_page_number }}{% if query %}&q={{ query }}{% endif %}">>次へ</a>
+      <a href="?page={{ posts.paginator.num_pages }}{% if query %}&q={{ query }}{% endif %}">>>最終ページ</a></p>
+  {% endif %}
+</div>
