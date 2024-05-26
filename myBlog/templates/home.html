@@ -1,0 +1,17 @@
+{% extends 'base_layout2.html' %}
+
+
+
+{% block content %}
+    <h1>ブログ投稿新着5件</h1>
+    
+     {% for article in posts %}
+       <div class="post-preview">
+         <h2 class="post-title"><a href="{% url 'posts:detail' slug=article.slug %}">{{ article.title }}</a></h2>
+         <p>{{ article.snippet }}</p>
+         <p class="post-meta">{{ article.date }}</p>
+       </div>
+        <hr>
+     {% endfor %}
+    
+{% endblock %}
