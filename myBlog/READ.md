@@ -15,7 +15,64 @@
 ```
 #Python 3.7.0 環境
 
-pip3 install django-ckeditor, 
+$ pip list
+Package                        Version
+------------------------------ --------
+asn1crypto                     0.24.0
+beautifulsoup4                 4.6.3
+cffi                           1.11.5
+cryptography                   2.3
+Django                         2.0.3
+django-braces                  1.12.0
+django-category                2.0.0
+django-ckeditor                5.6.1
+django-classy-tags             0.8.0
+django-cors-headers            2.4.0
+django-crispy-forms            1.7.2
+django-csp                     3.4
+django-debug-toolbar           1.10.1
+django-elasticsearch-dsl       0.5.0
+django-feedreader              2.0.0
+django-froala-editor           2.8.5
+django-hitcount                1.3.0
+django-js-asset                1.1.0
+django-js-reverse              0.8.2
+django-markitup                3.0.0
+django-object-tools            1.11.0
+django-pandas                  0.5.1
+django-taggit                  0.23.0
+django-taggit-templatetags2    1.6.1
+django-templatetag-sugar       1.0
+django-webpack-loader          0.6.0
+djangorestframework            3.8.2
+djangorestframework-camel-case 0.2.0
+elasticsearch                  6.3.1
+elasticsearch-dsl              6.2.1
+factory-boy                    2.10.0
+Faker                          0.9.1
+feedparser                     5.2.1
+gunicorn                       19.9.0
+idna                           2.7
+ipaddress                      1.0.22
+mysql-connector-python         8.0.12
+mysqlclient                    1.3.13
+numpy                          1.15.2
+pandas                         0.23.4
+Pillow                         5.2.0
+pip                            24.0
+protobuf                       3.6.0
+pycparser                      2.18
+PyMySQL                        0.9.2
+python-dateutil                2.7.3
+pytz                           2018.5
+scipy                          1.1.0
+setuptools                     39.0.1
+six                            1.11.0
+sqlparse                       0.2.4
+text-unidecode                 1.2
+urllib3                        1.23
+uWSGI                          2.0.17.1
+
 
 ```
 
