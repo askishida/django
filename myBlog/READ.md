@@ -12,15 +12,16 @@
 
 2,前準備
 =
+```
 #Python 3.7 環境
 
 pip3 install django-ckeditor, 
 
-
+```
 
 3,Nginx settings
 =
-
+```
 #etc/nginx/nginx.conf
 
 user  adminuser;
@@ -195,7 +196,7 @@ http {
         }
     }
  }
-
+```
 
 
 
