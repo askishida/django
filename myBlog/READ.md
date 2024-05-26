@@ -14,7 +14,7 @@
 =
 ```
 #Python 3.7.0 環境
-$source ~/django_py3.7(仮想環境)/bin/activate
+$ source ~/django_py3.7(仮想環境)/bin/activate
 $ pip list
 Package                        Version
 ------------------------------ --------
