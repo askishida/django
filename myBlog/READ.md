@@ -5,7 +5,7 @@ pip3 install django-ckeditor,
 
 
 
-2,nginx
+2,Nginx settings
 =
 
 #etc/nginx/nginx.conf
